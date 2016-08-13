@@ -20,7 +20,7 @@ Creating this version will give you a web based chat app. With a few integration
 
 1. Deploy your app to Heroku using the button below. It's a service for hosting apps so go sign up if you don't already have an account – it's free. You'll need to specify your app token, key ID, and secret in the app's `SMOOCH_APP_TOKEN`, `SMOOCH_KEY_ID`, and `SMOOCH_SECRET` config settings.
 
-    [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/esthercrawford/estherbot)
+    [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/zionyx/HanaBot)
 
 1. Your app should now be running on Heroku but you're not quite done yet. Take note of the URL where your heroku app is running, for example `https://foo-bar-4242.herokuapp.com`. You'll need to specify this in your heroku app `SERVICE_URL` config variable. You can do this in the Heroku control panel under *Settings* > *Config Variables*. Make sure to go under Deploy and connect to your GitHub repo. Then, enable Automatic Deploys from the master branch (this means anytime you make an edit to your bot's script, it'll automatically update and talk as intended in seconds.) 
 
@@ -48,20 +48,20 @@ Adding pictures is super easy. Make sure you upload the files to your img folder
 
 Here's an example of the syntax for adding an image: 
 
-    Hi there!\nI'm the personal bot of Esther, a Product Marketer from San Francisco.\n![esther](https://raw.githubusercontent.com/esthercrawford/EstherBot/master/img/esther.jpg)
+    Hi there!\nI'm the personal bot of Lee, a Software Developer from Malaysia in Denmark.\n![esther](https://avatars0.githubusercontent.com/u/1426398)
 
 ##Add buttons to your messages
 On Facebook Messenger these buttons are called "structured messages". It makes it easier for your user to follow the script. They don't even have to type the keywords - they just have to select a button. That means fewer user errors and less frustration.
 
 In the script.json file you'll notice this: 
 
-    %[Tweet Esther](http://bit.ly/estherbot-tweet)
+    %[Tweet Esther](http://bit.ly/zionyx-tweet)
 
 This is a smiple link button. When the user taps it, they will open the link in a new browser window.
 
 If you want to have a button trigger your bot to do something, you can use a postback buttons that looks like this:
 
-    %[Tell her](postback:twitter)
+    %[Tell him](postback:twitter)
 
 The syntax is similar to a link button, but note the `postback:` prefix. The "Tell her" piece is what the button says, and the "twitter" part after the `postback:` prefix is an extra note you can include in the notificaiton your bot receieves when the user taps the button.
 
@@ -70,13 +70,13 @@ The syntax is similar to a link button, but note the `postback:` prefix. The "Te
 - Postbacks: http://docs.smooch.io/#postbacks
 - Webhooks: http://docs.smooch.io/rest/#webhooks
 
-The good news is Estherbot is clever, and simplifies much of this! Estherbot [will automatically](https://github.com/esthercrawford/EstherBot/blob/master/heroku/index.js#L113) accept postback events and treat them as if they were a keyword sent by the user. For example, when a user taps a postback button such as `%[Tell her](postback:twitter)` Estherbot will react as if they had typed out the message `Tell her`.
+The good news is Estherbot is clever, and simplifies much of this! Estherbot [will automatically](https://github.com/zionyx/HanaBot/blob/master/heroku/index.js#L113) accept postback events and treat them as if they were a keyword sent by the user. For example, when a user taps a postback button such as `%[Tell her](postback:twitter)` Estherbot will react as if they had typed out the message `Tell her`.
 
 ##Bring it altogether
 Read the JSON below and you'll see there are line breaks, an image, and 3 buttons in this bot's response.   
 
     {
-        "BOT": "Hi there!\nI’m the personal bot of Esther, a Product Marketer from San Francisco.\n![esther](https://raw.githubusercontent.com/esthercrawford/smooch-bot-example/master/img/esther.jpg)\nWant to know more about bots or learn about Esther? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Esther](postback:learn_about_esther) %[One random fact!](postback:random_fact)"
+        "BOT": "Hi there!\nI’m the personal bot of Esther, a Product Marketer from San Francisco.\n![esther](https://avatars0.githubusercontent.com/u/1426398)\nWant to know more about bots or learn about Lee? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Lee](postback:learn_about_lee) %[One random fact!](postback:random_fact)"
     }
 
 ⚠️ **Note:** If you're not familiar with the JSON syntax you can always paste your script into http://jsonlint.com/ to make sure your syntax in order.
