@@ -32,7 +32,7 @@ class BetterSmoochApiBot extends SmoochApiBot {
 }
 
 const name = 'HanaBot';
-const avatarUrl = 'https://robohash.org/HanaBot?size=80x80';
+const avatarUrl = 'https://raw.githubusercontent.com/zionyx/HanaBot/master/img/HanaBot.png';
 const store = new SmoochApiStore({
     jwt
 });

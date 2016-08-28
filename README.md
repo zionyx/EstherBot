@@ -27,7 +27,7 @@ Creating this version will give you a web based chat app. With a few integration
 1. You should be all set. Open your Heroku app and start chatting with your new bot!
 
 ##Teach Your Bot To Talk
-Now that you have a bot you need to decide what it'll say. That's where the file script.json comes in. It's the document you need to edit to make your bot talk.
+Now that you have a bot you need to decide what it'll say. That's where the file {{script.json}} comes in. It's the document you need to edit to make your bot talk.
 
 By clicking on the pencil icon you can edit the document. The keywords are on the left, and the bot's response is on the right. For example, if a user types "hello" then the bot will say "Sweet, let's do this..."
 
@@ -55,7 +55,7 @@ On Facebook Messenger these buttons are called "structured messages". It makes i
 
 In the script.json file you'll notice this: 
 
-    %[Tweet Esther](http://bit.ly/zionyx-tweet)
+    %[Tweet Lee](http://bit.ly/zionyx-tweet)
 
 This is a smiple link button. When the user taps it, they will open the link in a new browser window.
 
